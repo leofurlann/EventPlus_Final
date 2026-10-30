@@ -1,0 +1,79 @@
+/* Organização dos cards */
+main > div {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 300px));
+    justify-content: center;
+    gap: 28px;
+    width: 100%;
+    max-width: 1400px;
+    margin: 30px auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+/* Card */
+.home-evento-card {
+    width: 100%;
+    min-width: 0;
+    overflow: hidden;
+    background: #fff;
+    border: 1px solid #e5dce1;
+    border-radius: 14px;
+    box-shadow: 0 4px 12px rgba(23, 20, 63, 0.08);
+    text-align: center;
+    box-sizing: border-box;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.home-evento-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(23, 20, 63, 0.13);
+}
+
+/* Imagem */
+.home-evento-card img {
+    display: block;
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+/* Categoria */
+.home-evento-card > span {
+    display: block;
+    width: fit-content;
+    min-width: 110px;
+    margin: 14px auto;
+    padding: 4px 14px;
+    border-radius: 20px;
+    background: #d9ddff;
+    color: #17143f;
+    font-size: 14px;
+}
+
+/* Informações */
+.home-evento-card-info {
+    padding: 0 18px 20px;
+}
+
+.home-evento-card-info h3 {
+    color: #17143f;
+    font-size: 22px;
+    line-height: 1.3;
+    margin: 16px 0;
+}
+
+.home-evento-card-info p {
+    color: #555568;
+    font-size: 15px;
+    line-height: 1.5;
+    margin-bottom: 18px;
+}
+
+@media (max-width: 600px) {
+    main > div {
+        grid-template-columns: minmax(0, 1fr);
+        padding: 0;
+        gap: 22px;
+    }
+}
