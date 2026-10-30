@@ -64,7 +64,7 @@ function Login(){
                 onChange={(event) => setSenha(event.target.value)}
                 placeholder="Senha"
                 autoComplete="current-password"
-                minLength={8}
+                minLength={6}
                 required
              />
         </div>
